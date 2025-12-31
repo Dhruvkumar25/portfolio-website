@@ -3,34 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhruv Kumar | AI Researcher & Software Engineer</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-  <!-- Custom CSS -->
+  <title>Dhruv Kumar | AI Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="container header-container">
+<header class="header">
+  <div class="container">
     <h1>Dhruv Kumar</h1>
     <nav>
-      <a href="#hero">Home</a>
       <a href="#profile">Profile</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#patents">Patents</a>
-      <a href="#academic">Academic</a>
-      <a href="#recommendations">Mentors</a>
+      <a href="#mentors">Mentors</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -39,148 +25,150 @@
 <main class="container">
 
   <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-grid">
-      <div class="hero-image" data-aos="fade-right">
-        <img src="photo.png" alt="Dhruv Kumar">
-      </div>
-      <div class="hero-text" data-aos="fade-left">
-        <h2>Hello, I’m Dhruv Kumar</h2>
-        <p class="subtitle">AI / ML Researcher & Software Engineer</p>
-        <p class="meta">Medical Image Analysis · Explainable AI · Scalable Systems</p>
-        <div class="hero-links">
-          <a href="Dhruv_Kumar_Resume.pdf" target="_blank" class="btn">Resume</a>
-          <a href="https://github.com/Dhruvkumar25" target="_blank" class="btn">GitHub</a>
-          <a href="https://www.linkedin.com/in/dhruvkumar25" target="_blank" class="btn">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=-n3q0hYAAAAJ" target="_blank" class="btn">Scholar</a>
-        </div>
+  <section class="hero" id="hero">
+    <div class="hero-left" data-slide="left">
+      <img src="photo.png" alt="Dhruv Kumar">
+    </div>
+    <div class="hero-right" data-slide="right">
+      <h2>Hello, I’m Dhruv Kumar</h2>
+      <p class="role">AI / ML Researcher & Software Engineer</p>
+      <p class="meta"> AI Researcher & Software Engineer · Medical Image Analysis · Explainable AI · Scalable AI Systems · Optimization </p>
+      <div class="links">
+        <a href="cv_dhruvkumar.pdf" target="_blank">Resume</a>
+        <a href="https://scholar.google.com/citations?user=-n3q0hYAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/dhruvkumar25" target="_blank">LinkedIn</a>
+        <a href="mailto:dhruvkumarrana25@gmail.com">Contact</a>
       </div>
     </div>
   </section>
 
   <!-- PROFILE -->
-  <section id="profile" class="section" data-aos="fade-up">
+  <section id="profile" class="section" data-fade>
     <h2>Profile</h2>
     <p>
-      Undergraduate Computer Science student at VIT Bhopal. Working at the intersection of AI, ML, and software engineering.
-      Developing explainable AI systems and scalable production-ready software solutions.
+      AI/ML & Software Engineer with strong foundations in machine learning, medical image analysis, and scalable
+software development. IEEE-published researcher passionate about transforming complex data into reliable, impactful
+AI-powered applications.
     </p>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="cards-grid">
-      <div class="card" data-aos="fade-up">
-        <img src="ntu.png" alt="NTU Logo" class="card-logo">
-        <h3>NTU Singapore</h3>
-        <span>Research Project · 2025 – Present</span>
-        <p>
-          Developing multimodal medical imaging datasets for brain tumor detection under Prof. Huihui Fang (Alibaba–NTU Joint Research Institute).
-        </p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <img src="MANIT.png" alt="MANIT Logo" class="card-logo">
-        <h3>MANIT Bhopal</h3>
-        <span>Research Intern · 2024 – Present</span>
-        <p>
-          Interdisciplinary research on Indian classical music ragas and healthcare outcomes using computational analysis.
-        </p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <img src="TATA.png" alt="TATA Projects Logo" class="card-logo">
-        <h3>TATA Projects Ltd.</h3>
-        <span>Software / Database Intern · May 2024 – Jun 2024</span>
-        <p>
-          Enterprise-scale database systems for real-time industrial data management and workflow optimization.
-        </p>
-      </div>
+  <section id="experience" class="section" data-fade>
+  <h2>Experience</h2>
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="ntu.png" alt="NTU Logo" class="card-logo">
+      <h3>NTU Singapore</h3>
+      <span>Research Project · 2025 – Present</span>
+      <p>Collaborating with Prof. Huihui Fang (Alibaba-NTU Joint Research Institute) to develop a high-quality, multimodal medical imaging dataset for brain tumor detection.</p>
     </div>
-  </section>
+    
+    <div class="card">
+      <img src="Maulana_Azad_National_Institute_of_Technology_Logo.png" alt="MANIT Logo" class="card-logo">
+      <h3>MANIT Bhopal</h3>
+      <span>Research Intern · 2024 – Present</span>
+      <p>Interdisciplinary research on Indian classical music ragas and healthcare outcomes.</p>
+      <p>Applied data analysis and computational techniques to correlate musical patterns with physiological and psychological responses.</p>
+    </div>
+    
+    <div class="card">
+      <img src="images.png" alt="TATA Projects Logo" class="card-logo">
+      <h3>TATA Projects Ltd.</h3>
+      <span>Software / Database Intern · May – Jun 2024</span>
+      <p>Enterprise-scale database system development for industrial data management.</p>
+      <p>Gained exposure to IT infrastructure and enterprise database architecture.</p>
+    </div>
+    
+  </div>
+</section>
+
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Selected Projects</h2>
-    <div class="cards-grid">
-      <div class="card" data-aos="fade-up">
-        <h3>Kidney Disease Detection</h3>
-        <p>
-          CLAHE-enhanced CT scans, GNN feature extraction, classification with Random Forest + XGBoost.
-          <a href="https://github.com/Dhruvkumar25/kidney-disease" target="_blank">View Code</a>
-        </p>
+  <section id="projects" class="section" data-fade>
+    <h2>Projects</h2>
+    <div class="card-container">
+        <div class="card">
+        <h3>Medical Imaging Dataset Creation – NTU</h3>
+        <p>Collaborating on a large-scale kidney medical imaging dataset
+involving dataset structuring, annotation planning, preprocessing (CLAHE, resizing, normalization), and metadata
+management for future AI-driven disease detection research.</p>
       </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h3>COVID-19 Detection from Lung CT Images</h3>
-        <p>
-          Tensor-EWT + Gabor features + NCA feature selection + LS-SVM classification. Accuracy: 96.29%. 
-          <a href="https://ieeexplore.ieee.org/" target="_blank">View Paper</a>
-        </p>
+      <div class="card">
+        <h3>Kidney Ultrasound Classification via PCA-Guided Multi-Domain Feature Fusion.</h3>
+        <p>Fused deep learning
+and wavelet features with PCA-based selection for multi-class kidney disease classification, achieving state-of-the-art
+accuracy and robustness.</p>
       </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Hybrid CNN–XGBoost for Animal Disease Detection</h3>
-        <p>
-          CNN feature extraction + XGBoost classification for early non-invasive detection.
-        </p>
+      <div class="card">
+        <h3>ML-Based COVID-19 Detection from Lung CT Images</h3>
+        <p>Developed a ML framework using Tensor-Empirical
+Wavelet Transform (Tensor-EWT) and Gabor features for COVID-19 diagnosis. Feature selection via NCA and
+Student’s t-value, classification with LS-SVM. Achieved 96.29% accuracy, 96.56% specificity, 96.03% sensitivity, and
+95% F1-score. Published in IEEE</p>
       </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
-        <h3>Crop Disease Detection (InceptionV3)</h3>
-        <p>
-          54,000+ images, deployed on Android with IoT sensor integration.
-        </p>
+      <div class="card">
+        <h3>Hybrid CNN–XGBoost Model for Early Diagnosis of Animal Respiratory Diseases</h3>
+        <p>Developed a hybrid deep learning model combining CNN feature extraction and XGBoost classification to detect respiratory diseases in livestock using thermographic and RGB images. Achieved over 90% precision and recall in early, non-invasive detection, outperforming conventional methods and enabling real-time health monitoring in farm settings.</p>
+      </div>
+      <div class="card">
+        <h3>Crop Disease Detection</h3>
+        <p>Built a deep learning system trained on 54,000+ PlantVillage images (14 crops) using InceptionV3. Achieved 91.97% validation accuracy. Integrated TensorFlow Lite for on-device Android inference with IoT sensor monitoring. Submitted to IEEE..</p>
       </div>
     </div>
   </section>
 
-  <!-- RECOMMENDATIONS -->
-  <section id="recommendations" class="section">
-    <h2>Mentors & Recommendations</h2>
-    <div class="cards-grid">
-      <div class="card" data-aos="fade-up">
-        <div class="card-icon"><i class="fas fa-user-tie"></i></div>
-        <h3>Prof. Huihui Fang</h3>
-        <span>Research Scientist · Alibaba–NTU</span>
-        <p>Mentoring my research on multimodal medical imaging dataset creation for brain tumor detection.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-        <h3>Dr. Rajneesh Kumar Patel</h3>
-        <span>Assistant Professor · VIT Bhopal</span>
-        <p>Guiding research in AI, medical image analysis, and methodology.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
-        <h3>Dr. Ajeet Singh</h3>
-        <span>Assistant Professor · VIT Bhopal</span>
-        <p>Supporting academic development and structured research planning.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
-        <div class="card-icon"><i class="fas fa-user-tie"></i></div>
-        <h3>Dr. Deep Chandra Updhyaye</h3>
-        <span>Assistant Professor · VIT Bhopal</span>
-        <p>Faculty mentor providing guidance and encouragement.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="400">
-        <div class="card-icon"><i class="fas fa-user-shield"></i></div>
-        <h3>Dr. Chandan Kumar Behera</h3>
-        <span>Director Student Welfare · VIT Bhopal</span>
-        <p>Mentorship in leadership, support, and student development.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="500">
-        <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-        <h3>Dr. Aanjan Kumar</h3>
-        <span>Assistant Professor · VIT Bhopal</span>
-        <p>Faculty advisor providing academic and research guidance.</p>
-      </div>
+  <!-- MENTORS -->
+<section id="mentors" class="section" data-fade>
+  <h2>Mentors & Recommendations</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Prof. Huihui Fang</h3>
+      <span>Research Scientist · Alibaba–NTU Joint Research Institute</span>
+      <a href="mailto: fanghuihuibit@163.com">fanghuihuibit@163.com</a>
+      <p>Mentoring my research on multimodal medical imaging dataset creation for brain tumor detection.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Dr. Rajneesh Kumar Patel</h3>
+      <span>Assistant Professor · VIT Bhopal</span>
+      <a href="mailto:rajneeshkumarpatel@vitbhopal.ac.in">rajneeshkumarpatel@vitbhopal.ac.in</a>
+      <p>Guiding research in AI, medical image analysis, and methodology.</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Ajeet Singh</h3>
+      <span>Assistant Professor · VIT Bhopal</span>
+      <a href="mailto:ajeetsingh@vitbhopal.ac.in">ajeetsingh@vitbhopal.ac.in</a>
+      <p>Supporting academic development and structured research planning.</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Deep Chandra Updhyaye</h3>
+      <span>Assistant Professor · VIT Bhopal</span>
+      <a href="mailto:dcupadhyay.rs.ece17@itbhu.ac.in">dcupadhyay.rs.ece17@itbhu.ac.in</a>
+      <p>Faculty mentor providing guidance and encouragement.</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Chandan Kumar Behera</h3>
+      <span>Director Student Welfare · VIT Bhopal</span>
+      <a href="mailto:ad2.sw@vitbhopal.ac.in">ad2.sw@vitbhopal.ac.in</a>
+      <a href="mailto:chandank.behera@vitbhopal.ac.in">chandank.behera@vitbhopal.ac.in</a>
+      <p>Mentorship in leadership, support, and student development.</p>
+    </div>
+    <div class="card">
+      <h3>Dr. S.Aanjan Kumar</h3>
+      <span>Assistant Professor · VIT Bhopal</span>
+      <a href="mailto:aanjan.kumar@vitbhopal.ac.in">aanjan.kumar@vitbhopal.ac.in</a>
+      <p>Faculty advisor providing academic and research guidance.</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- CONTACT -->
-  <section id="contact" class="section" data-aos="fade-up">
+  <section id="contact" class="section" data-fade>
     <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="mailto:dhruvkumarrana25@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/dhruvkumar25" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/Dhruvkumar25" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <div class="links">
+      <a href="mailto:dhruvkumarrana25@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/dhruvkumar25" target="_blank">LinkedIn</a>
     </div>
   </section>
 
@@ -190,7 +178,6 @@
   © 2025 Dhruv Kumar · AI Research & Software Engineering
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
