@@ -16,6 +16,22 @@ body {
     padding: 90px 24px;
 }
 
+/* HERO */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid #1f2933;
+}
+
 .hero h1 {
     font-size: 3rem;
     font-weight: 600;
@@ -28,22 +44,23 @@ body {
 }
 
 .meta {
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 0.95rem;
     color: #8a8a8a;
 }
 
 .links {
-    margin-top: 32px;
+    margin-top: 28px;
 }
 
 .links a {
-    margin-right: 22px;
+    margin-right: 18px;
     text-decoration: none;
     color: #5da9ff;
     font-weight: 500;
 }
 
+/* SECTIONS */
 section {
     margin-top: 90px;
 }
@@ -54,13 +71,27 @@ h2 {
     margin-bottom: 24px;
 }
 
+/* ITEMS */
 .item {
-    margin-bottom: 42px;
+    margin-bottom: 44px;
+}
+
+.logo-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.logo-item img {
+    width: 48px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.85;
 }
 
 .item h3 {
     margin-bottom: 6px;
-    font-size: 1.1rem;
 }
 
 .item span {
@@ -68,9 +99,23 @@ h2 {
     color: #8a8a8a;
 }
 
+/* RECOMMENDATIONS */
+.rec {
+    margin-bottom: 38px;
+}
+
+.rec h3 {
+    margin-bottom: 4px;
+}
+
+.rec span {
+    font-size: 0.85rem;
+    color: #8a8a8a;
+}
+
+/* FOOTER */
 footer {
     margin-top: 120px;
     font-size: 0.8rem;
     color: #6f6f6f;
 }
-
