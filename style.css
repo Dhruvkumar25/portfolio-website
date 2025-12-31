@@ -1,122 +1,129 @@
-/* =========================
-   ROOT & RESET
-========================= */
+/* ------------------ ROOT ------------------ */
 :root {
-  --bg: #f7f7f8;
-  --card-bg: #ffffff;
+  --bg: #ffffff;
   --text: #0f172a;
-  --muted: #64748b;
-  --accent: #2563eb;
+  --muted: #475569;
   --border: #e5e7eb;
-  --radius: 14px;
-  --shadow: 0 8px 30px rgba(0,0,0,0.04);
-  --max-width: 1100px;
+  --accent: #0ea5e9;
 }
 
+/* ------------------ RESET ------------------ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* =========================
-   GLOBAL LAYOUT
-========================= */
-.section {
-  max-width: var(--max-width);
+/* ------------------ LAYOUT ------------------ */
+.container {
+  max-width: 1100px;
   margin: auto;
-  padding: 80px 24px;
+  padding: 40px 20px;
 }
 
-h2 {
-  font-size: 2.1rem;
+/* ------------------ HEADER ------------------ */
+.header {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 32px;
-  letter-spacing: -0.5px;
 }
 
-p {
+.header nav a {
+  margin-left: 18px;
+  text-decoration: none;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
-/* =========================
-   HERO / PROFILE
-========================= */
+.header nav a:hover {
+  color: var(--accent);
+}
+
+/* ------------------ HERO ------------------ */
 .hero {
-  text-align: center;
-  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 50px;
 }
 
-.profile-pic {
-  width: 130px;
-  height: 130px;
+.hero-left img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
-.hero h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
+.hero-right h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
-.hero span {
-  display: block;
-  margin-top: 8px;
+.role {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.meta {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
 }
 
-.hero .links {
-  margin-top: 18px;
-}
-
-.hero .links a {
-  margin: 0 10px;
+.links a {
+  margin-right: 16px;
   text-decoration: none;
   color: var(--accent);
-  font-weight: 500;
+  font-size: 0.95rem;
 }
 
-/* =========================
-   CARD SYSTEM
-========================= */
+/* ------------------ SECTIONS ------------------ */
+.section {
+  margin-top: 70px;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+/* ------------------ CARDS ------------------ */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 22px;
 }
 
 .card {
-  background: var(--card-bg);
-  padding: 28px;
-  border-radius: var(--radius);
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
 }
 
 .card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.05rem;
   margin-bottom: 6px;
 }
 
@@ -124,92 +131,54 @@ p {
   font-size: 0.9rem;
   color: var(--muted);
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .card p {
   font-size: 0.95rem;
-  margin-bottom: 8px;
+  color: var(--text);
 }
 
-/* =========================
-   LOGOS
-========================= */
+/* ------------------ LOGOS (FIXED SIZE) ------------------ */
 .card-logo {
-  width: 52px;
-  height: auto;
-  margin-bottom: 14px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
-/* =========================
-   RECOMMENDATIONS
-========================= */
-.rec-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 26px;
-  border-radius: var(--radius);
-}
-
-.rec-card h3 {
-  font-size: 1.15rem;
-}
-
-.rec-card span {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.rec-card a {
-  display: inline-block;
-  margin-top: 10px;
+/* ------------------ MENTOR EMAILS ------------------ */
+.card a {
+  display: block;
+  margin: 6px 0;
   font-size: 0.9rem;
   color: var(--accent);
   text-decoration: none;
 }
 
-/* =========================
-   EXPERIENCE TIMELINE FEEL
-========================= */
-#experience .card {
-  border-left: 4px solid var(--accent);
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* ------------------ FOOTER ------------------ */
 footer {
+  margin-top: 80px;
+  padding: 20px;
   text-align: center;
-  padding: 40px 20px;
   font-size: 0.9rem;
   color: var(--muted);
+  border-top: 1px solid var(--border);
 }
 
-/* =========================
-   ANIMATION (SUBTLE)
-========================= */
-[data-fade] {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 600px) {
-  h2 {
-    font-size: 1.7rem;
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .hero-left img {
+    margin: auto;
+  }
+
+  .header .container {
+    flex-direction: column;
+    gap: 12px;
   }
 }
