@@ -1,5 +1,2 @@
-AOS.init({
-  duration: 1000,
-  once: true
-});
-
+// AOS animation init
+AOS.init({ duration: 1000, once:true });
