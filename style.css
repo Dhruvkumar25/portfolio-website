@@ -1,43 +1,215 @@
-/* Base */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
-body { background:#f9f9f9; color:#333; scroll-behavior:smooth;}
-a { text-decoration:none; color:#006aff;}
-.container { max-width:1200px; margin:auto; padding:20px; }
+/* =========================
+   ROOT & RESET
+========================= */
+:root {
+  --bg: #f7f7f8;
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 8px 30px rgba(0,0,0,0.04);
+  --max-width: 1100px;
+}
 
-/* Header */
-header { position:sticky; top:0; background:#1e1e2f; color:#fff; padding:15px 0; z-index:100; }
-.header-container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-header nav a { margin-left:20px; font-weight:500; color:#fff; transition:0.3s; }
-header nav a:hover { color:#00bfa6; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Hero */
-.hero { display:flex; gap:40px; align-items:center; padding:80px 20px; background:linear-gradient(135deg,#00bfa6,#006aff); color:#fff; border-radius:15px; flex-wrap:wrap;}
-.hero-image img { width:220px; border-radius:50%; border:5px solid #fff; box-shadow:0 10px 30px rgba(0,0,0,0.2);}
-.hero-text h2 { font-size:2.5rem; margin-bottom:10px; }
-.hero-text .subtitle { font-weight:400; margin-bottom:5px; font-size:1.2rem; }
-.hero-text .meta { font-size:0.9rem; opacity:0.85; margin-bottom:20px; }
-.hero-links a { display:inline-block; margin:5px; padding:10px 20px; border-radius:25px; background:#fff; color:#006aff; font-weight:600; transition:0.3s; }
-.hero-links a:hover { background:#00bfa6; color:#fff; }
+html {
+  scroll-behavior: smooth;
+}
 
-/* Section */
-.section { margin-bottom:60px; }
-.section h2 { font-size:2rem; color:#006aff; margin-bottom:25px; text-align:center; }
-.section p { text-align:center; font-size:1rem; line-height:1.5; }
-.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; justify-items:center; }
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-/* Cards */
-.card { background:#fff; padding:25px; border-radius:15px; box-shadow:0 12px 25px rgba(0,0,0,0.12); transition:transform 0.3s, box-shadow 0.3s; text-align:center; }
-.card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
-.card-logo { width:60px; margin-bottom:15px; }
-.card-icon { width:60px; height:60px; background:linear-gradient(135deg,#00bfa6,#006aff); border-radius:50%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:1.8rem; margin:0 auto 15px; }
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+.section {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 80px 24px;
+}
 
-/* Contact links */
-.contact-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-.contact-links a { display:flex; align-items:center; gap:10px; background:#fff; padding:10px 20px; border-radius:25px; color:#006aff; font-weight:600; transition:0.3s; }
-.contact-links a:hover { background:#00bfa6; color:#fff; }
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
 
-/* Footer */
-footer { text-align:center; padding:20px; background:#1e1e2f; color:#fff; margin-top:40px; }
+p {
+  color: var(--muted);
+  font-size: 1rem;
+}
 
-/* Responsive */
-@media(max-width:900px){ .hero { flex-direction:column; text-align:center; } .hero-text { text-align:center; } }
+/* =========================
+   HERO / PROFILE
+========================= */
+.hero {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.hero span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.hero .links {
+  margin-top: 18px;
+}
+
+.hero .links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* =========================
+   CARD SYSTEM
+========================= */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   LOGOS
+========================= */
+.card-logo {
+  width: 52px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   RECOMMENDATIONS
+========================= */
+.rec-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 26px;
+  border-radius: var(--radius);
+}
+
+.rec-card h3 {
+  font-size: 1.15rem;
+}
+
+.rec-card span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.rec-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* =========================
+   EXPERIENCE TIMELINE FEEL
+========================= */
+#experience .card {
+  border-left: 4px solid var(--accent);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* =========================
+   ANIMATION (SUBTLE)
+========================= */
+[data-fade] {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
