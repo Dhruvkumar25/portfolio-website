@@ -1,17 +1,23 @@
-const sections = document.querySelectorAll('.fade');
+// Simple fade-in on scroll (clean & lightweight)
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section, article");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1
     }
-  });
-});
+  );
 
-sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(20px)';
-  section.style.transition = '0.6s ease';
-  observer.observe(section);
+  sections.forEach(section => {
+    section.classList.add("fade");
+    observer.observe(section);
+  });
 });
