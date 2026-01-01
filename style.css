@@ -150,16 +150,17 @@ p {
     content: "";
     position: absolute;
     left: 36px;
-    top: 0;
-    bottom: 0;
+    top: 52px;          /* starts after heading */
+    bottom: 52px;       /* ends before section bottom */
     width: 2px;
     background: linear-gradient(
         to bottom,
         rgba(93,169,255,0),
-        rgba(93,169,255,0.8),
+        rgba(93,169,255,0.7),
         rgba(93,169,255,0)
     );
 }
+
 
 .logo-item {
     display: flex;
